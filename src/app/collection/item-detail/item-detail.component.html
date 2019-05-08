@@ -1,14 +1,10 @@
-<p>
-  item-detail works!
-</p>
-<router-outlet></router-outlet> 
 <div class="row">
   <div class="col-md-6 mb-5">
     <div class="card h-100">
       <div class="card-body">
         <h4 class="card-title">{{item.item_code | uppercase}}:: Product Images</h4>
         <div class="text-center"> 
-            <img *ngFor="let image of item.images" class="card-img-top colmd-5 px-0" [src]="row_ac001_0.jpg" alt="armchair image">
+            <img *ngFor="let image of item.images" class="card-img-top colmd-5 px-0" [src]="image" alt="armchair image">
         </div>
       </div>
     </div>
@@ -24,7 +20,7 @@
         <hr />
         <h6 class="card-title">Description</h6>
         <p class="card-text">{{item.description}}</p><hr/>
-        <div class="text-center">
+        <div class="text-center"> -->
           <!-- <a routerLink="/collection/1/furniture" class="btn btnprimary">Back to Collection</a> -->
           <button (click)="backToCollection()" class="btn btn-primary">Back to Collection</button>
         </div>

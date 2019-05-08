@@ -26,6 +26,7 @@ export class ItemListComponent implements OnInit {
         });
       });
     } 
+    
    viewDetail(it_id) {
      this.router.navigate([it_id], {relativeTo: this.route});
     }
