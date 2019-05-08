@@ -1,10 +1,9 @@
 import { EventEmitter, Injectable } from '@angular/core'; 
 import { Category } from '../model/category.model'; 
 import { Observable } from 'rxjs/Observable'; 
-// import { Observable} from 'rxjs';
 import { Http, Response, Headers } from '@angular/http'; 
- 
 import 'rxjs/Rx';
+import { from } from 'rxjs';
 
  
 @Injectable() 
@@ -26,18 +25,18 @@ export class CategoryService {
       (error) => console.log(error)             
     );     
   }
-  // getCategories() {        
-  //    return this.categoryList.slice();     
-  // }
+  getCategories() {        
+     return this.categoryList.slice();     
+  }
 
-  // selectCategory(cat_id: string) {         
-  //   const result = this.categoryList.find((elem) => { 
-  //                 return (elem.cat_id == cat_id);         
-  //   }); 
+  selectCategory(cat_id: string) {         
+    const result = this.categoryList.find((elem) => { 
+                  return (elem.cat_id == cat_id);         
+    }); 
  
-  //   if (result != undefined) {             
-  //     this.categoryUpdated.emit(result);         
-  //   }         
-  //     return result;     
-  // }
+    if (result != undefined) {             
+      this.categoryUpdated.emit(result);         
+    }         
+      return result;     
+  }
 }
