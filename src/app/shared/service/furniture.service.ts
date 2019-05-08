@@ -15,7 +15,7 @@ export class FurnitureService {
     constructor(private http: Http) {} 
  
     loadFurniture(cat_id: string) {         
-      return this.http.get("/api/category/" + cat_id + "/furniture")
+      return this.http.get("http://localhost:3000/api/category/" + cat_id + "/furniture")
       .map((respone: Response) => {
         let data = respone.json();
         for(let elem of data) {

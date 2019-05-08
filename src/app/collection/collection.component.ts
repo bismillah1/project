@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'; 
 import { CategoryService } from '../shared/service/category.service'; 
-import { Category } from '../shared/model/category.model'; 
- 
+import { Category } from '../shared/model/category.model';
+
 @Component({   selector: 'app-collection',   
 templateUrl: './collection.component.html',   
 styleUrls: ['./collection.component.css'] 
